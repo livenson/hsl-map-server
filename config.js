@@ -1,9 +1,9 @@
-const sourcesUrl = "hsl-map-server:8080/map/v1/";
+const sourcesUrl = "localhost:8090/map/v1/";
 const glyphsUrl = `file://${process.env.WORK}/node_modules/hsl-map-style/`;
 
 module.exports = {
   "/map/v1/hsl-vector-map": {
-    "source": "mbtiles://./finland.mbtiles",
+    "source": "mbtiles://./estonia.mbtiles",
     "headers": {
       "Cache-Control": "public,max-age=3600"
     }
@@ -103,26 +103,14 @@ module.exports = {
       "Cache-Control": "public,max-age=43200"
     }
   },
-  "/map/v1/hsl-stop-map": {
-    "source": `otpstops://${process.env.HSL_OTP_URL}`,
+  "/map/v1/estonia-stop-map": {
+    "source": `otpstops://${process.env.ESTONIA_OTP_URL}`,
     "headers": {
       "Cache-Control": "public,max-age=43200"
     }
   },
   "/map/v1/hsl-route-map": {
     "source": `otproutes://${process.env.HSL_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
-  "/map/v1/finland-stop-map": {
-    "source": `otpstops://${process.env.FINLAND_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
-  "/map/v1/waltti-stop-map": {
-    "source": `otpstops://${process.env.WALTTI_OTP_URL}`,
     "headers": {
       "Cache-Control": "public,max-age=43200"
     }

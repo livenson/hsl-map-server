@@ -2,7 +2,7 @@ FROM node:6-stretch
 MAINTAINER Reittiopas version: 0.1
 
 ENV FONTSTACK_PASSWORD ""
-ENV ESTONIA_OTP_URL localhost:8080/otp/routers/estonia/index/graphql
+ENV ESTONIA_OTP_URL otp:8080/otp/routers/estonia/index/graphql
 #ENV HSL_OTP_URL api.digitransit.fi/routing/v1/routers/hsl/index/graphql
 #ENV FINLAND_OTP_URL api.digitransit.fi/routing/v1/routers/finland/index/graphql
 #ENV WALTTI_OTP_URL api.digitransit.fi/routing/v1/routers/waltti/index/graphql

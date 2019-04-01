@@ -92,7 +92,7 @@ module.exports = {
     }
   },
   "/map/v1/hsl-citybike-map": {
-    "source": `otpcitybikes://${process.env.HSL_OTP_URL}`,
+    "source": `otpcitybikes://${process.env.ESTONIA_OTP_URL}`,
     "headers": {
       "Cache-Control": "public,max-age=43200"
     }
@@ -110,7 +110,7 @@ module.exports = {
     }
   },
   "/map/v1/hsl-route-map": {
-    "source": `otproutes://${process.env.HSL_OTP_URL}`,
+    "source": `otproutes://${process.env.ESTONIA_OTP_URL}`,
     "headers": {
       "Cache-Control": "public,max-age=43200"
     }

@@ -120,11 +120,5 @@ module.exports = {
     "headers": {
       "Cache-Control": "public,max-age=172800"
     }
-  },
-  "/map/v1/hsl-ticket-sales-map": {
-    "source": "hslticketsales://",
-    "headers": {
-      "Cache-Control": "public,max-age=604800"
-    }
   }
 }

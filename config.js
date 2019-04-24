@@ -1,4 +1,4 @@
-const sourcesUrl = "${process.env.MAPSERVER_URL}";
+const sourcesUrl = `${process.env.MAPSERVER_URL}`;
 const glyphsUrl = `file://${process.env.WORK}/node_modules/hsl-map-style/`;
 
 module.exports = {

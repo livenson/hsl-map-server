@@ -90,19 +90,7 @@ module.exports = {
     "headers": {
       "Cache-Control": "public,max-age=604800"
     }
-  },
-  "/map/v1/hsl-citybike-map": {
-    "source": `otpcitybikes://${process.env.ESTONIA_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
-  "/map/v1/waltti-citybike-map": {
-    "source": `otpcitybikes://${process.env.WALTTI_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
+  },  
   "/map/v1/estonia-stop-map": {
     "source": `otpstops://${process.env.ESTONIA_OTP_URL}`,
     "headers": {
@@ -115,8 +103,8 @@ module.exports = {
       "Cache-Control": "public,max-age=43200"
     }
   },
-  "/map/v1/estonia-parkandride-bikestop-map": {
-    "source": "estoniaparkandridebikestop://",
+   "/map/v1/hsl-parkandride-map": {
+    "source": "hslparkandride://",
     "headers": {
       "Cache-Control": "public,max-age=172800"
     }

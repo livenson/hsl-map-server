@@ -1,9 +1,9 @@
-const sourcesUrl = "hsl-map-server:8080/map/v1/";
+const sourcesUrl = `${process.env.MAPSERVER_URL}`;
 const glyphsUrl = `file://${process.env.WORK}/node_modules/hsl-map-style/`;
 
 module.exports = {
   "/map/v1/hsl-vector-map": {
-    "source": "mbtiles://./finland.mbtiles",
+    "source": "mbtiles://./estonia.mbtiles",
     "headers": {
       "Cache-Control": "public,max-age=3600"
     }
@@ -90,53 +90,29 @@ module.exports = {
     "headers": {
       "Cache-Control": "public,max-age=604800"
     }
-  },
-  "/map/v1/hsl-citybike-map": {
-    "source": `otpcitybikes://${process.env.HSL_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
-  "/map/v1/waltti-citybike-map": {
-    "source": `otpcitybikes://${process.env.WALTTI_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
-  "/map/v1/hsl-stop-map": {
-    "source": `otpstops://${process.env.HSL_OTP_URL}`,
+  },  
+  "/map/v1/estonia-stop-map": {
+    "source": `otpstops://${process.env.ESTONIA_OTP_URL}`,
     "headers": {
       "Cache-Control": "public,max-age=43200"
     }
   },
   "/map/v1/hsl-route-map": {
-    "source": `otproutes://${process.env.HSL_OTP_URL}`,
+    "source": `otproutes://${process.env.ESTONIA_OTP_URL}`,
     "headers": {
       "Cache-Control": "public,max-age=43200"
     }
   },
-  "/map/v1/finland-stop-map": {
-    "source": `otpstops://${process.env.FINLAND_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
-  "/map/v1/waltti-stop-map": {
-    "source": `otpstops://${process.env.WALTTI_OTP_URL}`,
-    "headers": {
-      "Cache-Control": "public,max-age=43200"
-    }
-  },
-  "/map/v1/hsl-parkandride-map": {
+   "/map/v1/hsl-parkandride-map": {
     "source": "hslparkandride://",
     "headers": {
       "Cache-Control": "public,max-age=172800"
     }
   },
-  "/map/v1/hsl-ticket-sales-map": {
-    "source": "hslticketsales://",
+  "/map/v1/estonia-parkandride-bikestop-map": {
+    "source": "estoniaparkandridebikestop://",
     "headers": {
-      "Cache-Control": "public,max-age=604800"
+      "Cache-Control": "public,max-age=172800"
     }
   }
 }
